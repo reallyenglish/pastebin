@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Pastebin $
- * $Id: pastebin.php,v 1.3 2006/04/27 16:21:10 paul Exp $
+ * $Project: Not-Pastebin $
+ * $Id: pastebin.php,v v0.0.1-r01 11/10/2017 12:32:58 AM veritas Exp $
  * 
- * Pastebin Collaboration Tool
+ * Not-Pastebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
- * This file copyright (C) 2006 Paul Dixon (paul@elphin.com)
+  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
@@ -180,8 +180,8 @@ if (isset($_POST['paste']) && empty($_POST['email']))
 		#we want to drop a note to apache so that we log the ID with the post
 		#request, makes it much easier to identify who posted a given id from
  		#apache logs
-		apache_note('pasteid', "{$_SERVER['HTTP_HOST']}/{$id}");
-
+		#apache_note('pasteid', "{$_SERVER['HTTP_HOST']}/{$id}");
+		#Let's not.
 		$pastebin->redirectToPost($id);
 		exit;
 	}

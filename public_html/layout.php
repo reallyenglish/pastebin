@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Pastebin $
- * $Id: layout.php,v 1.1 2006/04/27 16:22:39 paul Exp $
+ * $Project: Not-Pastebin $
+ * $Id: layout.php,v 0.0.1-r01 11/10/2017 12:17:53 AM veritas Exp $
  * 
- * Pastebin Collaboration Tool
- * http://pastebin.com/
+ * Not-Pastebin Collaboration Tool
+ * http://scans.vts-tech.org/
  *
- * This file copyright (C) 2006 Paul Dixon (paul@elphin.com)
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
@@ -24,12 +24,9 @@
  
 echo "<?xml version=\"1.0\" encoding=\"".$charset_code[$charset]['http']."\"?>\n";
 
-
+$pid='';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
-<!--
-pastebin.com Copyright 2006 Paul Dixon - email suggestions to lordelph at gmail.com
--->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <title><?php echo $page['title'] ?></title>
@@ -148,28 +145,13 @@ for a variety of options.</p>
 
 <h1>News</h1>
 
-<!--
-<p><a href="http://blog.dixo.net/2010/02/09/want-to-buy-pastebin-com/">Want to buy pastebin.com?</a> Own a
-little bit of Internet history and develop it further!</p>
--->
-
 <?php
 
 echo "<p>";
-echo t('For news and feedback see my <a title="View pastebin related posts on my blog" href="http://blog.dixo.net/category/pastebin/">blog</a>.');
+echo t('For news and feedback see my <a title="View pastebin related posts on my blog" href="http://www.nigeltodman.com/">blog</a>.');
 echo "</p>";
 
 ?>
-<!--
-<h1>Translations?</h1>
-
-<p>Anyone interested in
-a <a href="http://blog.dixo.net/2006/05/10/translate-pastebin/">translated
-version of pastebin?</a>. If you'd like to volunteer as a translator or
-just want to give some feedback on the idea, please 
-<a href="http://blog.dixo.net/2006/05/10/translate-pastebin/">leave a comment</a>
-</p>
--->
 
 <?php
 
