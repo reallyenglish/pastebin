@@ -6,6 +6,7 @@ Restructured script. Moved /libs to /public_html
 Default is 'file' storage, ModRewrite off
 Modified CSS slightly
 Removed some Google affiliated scripts/code
+Upgraded to latest version of GeSHi
 
 Pastebin History
 =================
