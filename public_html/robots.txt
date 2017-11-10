@@ -1,4 +1,3 @@
-#
 # Unless you are Google, Yahoo or Microsoft, do not spider this
 # site without prior agreement, or an ip ban is likely
 #
