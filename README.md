@@ -1,4 +1,4 @@
-Pastebin-esque Project (Unnamed)
+Codebin (Pastebin Fork)
 ========
 
 This is a fork of the original Pastebin source code from 2007. It was
