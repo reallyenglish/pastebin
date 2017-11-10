@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Pastebin $
- * $Id: pastebin.class.php,v 1.2 2006/04/27 16:20:52 paul Exp $
+ * $Project: Not-Pastebin $
+ * $Id: pastebin.class.php,v 0.0.1-r01 11/10/2017 12:53:22 AM veritas Exp $
  * 
- * Pastebin Collaboration Tool
- * http://pastebin.com/
+ * Not-Pastebin Collaboration Tool
+ * http://scans.vts-tech.org/
  *
- * This file copyright (C) 2006 Paul Dixon (paul@elphin.com)
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
@@ -27,7 +27,7 @@
 * Pastebin class models the pastebin data storage without getting involved
 * in any UI generation
 */
-class Pastebin
+class PastebinClass
 {
 	var $conf=null;
 	var $db=null;
@@ -76,7 +76,9 @@ class Pastebin
 	{
 		if (!array_key_exists($format, $this->conf['all_syntax']))
 			$format='text';
-			
+		else {
+		 	$format='text';
+		}	
 		return $format;	
 	}
 	

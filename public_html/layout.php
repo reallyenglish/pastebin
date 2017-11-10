@@ -1,9 +1,9 @@
 <?php
 /**
- * $Project: Not-Pastebin $
- * $Id: layout.php,v 0.0.1-r01 11/10/2017 12:17:53 AM veritas Exp $
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
  * 
- * Not-Pastebin Collaboration Tool
+ * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
@@ -23,8 +23,6 @@
  */
  
 echo "<?xml version=\"1.0\" encoding=\"".$charset_code[$charset]['http']."\"?>\n";
-
-$pid='';
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
@@ -47,8 +45,8 @@ $pid='';
 
 <body onload="initPastebin()">
 <div style="display:none;">
-<h1 style="display: none;">pastebin - collaborative debugging</h1>
-<p style="display: none;">pastebin is a collaborative debugging tool allowing you to share
+<h1 style="display: none;">codebin - collaborative debugging</h1>
+<p style="display: none;">codebin is a collaborative debugging tool allowing you to share
 and modify code snippets while chatting on IRC, IM or a message board.</p>
 <p style="display: none;">This site is developed to XHTML and CSS2 W3C standards.  
 If you see this paragraph, your browser does not support those standards and you 
@@ -141,7 +139,7 @@ for a variety of options.</p>
 <?php
 
 echo "<p>";
-echo t('For news and feedback see my <a title="View pastebin related posts on my blog" href="http://www.nigeltodman.com/">blog</a>.');
+echo t('For news and feedback see my <a title="View codebin related posts on my blog" href="http://www.nigeltodman.com/">blog</a>.');
 echo "</p>";
 
 ?>
@@ -150,8 +148,8 @@ echo "</p>";
 
 echo '<h1>'.t('Credits').'</h1><p>';
 	
-	echo t('Original Pastebin developed by <a href="http://blog.dixo.net/about/">Paul Dixon</a>, 2002-2007 (<a href="https://github.com/lordelph/pastebin">GitHub</a>)<br><br>Forked by <a href="http://www.nigeltodman.com">Nigel Todman</a>, 2017 (<a href="https://github.com/Veritas83/pastebin">GitHub</a>)');
-
+	echo t('Original pastebin developed by <a href="http://blog.dixo.net/about/">Paul Dixon</a>, 2002-2007 (<a href="https://github.com/lordelph/pastebin">GitHub</a>)<br><br>Forked by <a href="http://www.nigeltodman.com">Nigel Todman</a>, 2017 (<a href="https://github.com/Veritas83/pastebin">GitHub</a>)<br><br>');
+	echo t('<font size=1>Ver: '.$ver.'</font>');
 ?>
 
 
@@ -161,36 +159,13 @@ echo '<h1>'.t('Credits').'</h1><p>';
 
 <div id="content">
 
-<?php
-/*
- * Google AdWords block is below - if you re-use this script, be sure
- * to configure your own AdWords client id!
- */
-if (strlen($CONF['google_ad_client']) && !isset($_GET['search'])) 
-{
-?>
-<!-- <script type="text/javascript"><!--
-google_ad_client = "pub-3281640380846080";
-google_ad_width = 728;
-google_ad_height = 90;
-google_ad_format = "728x90_as";
-google_ad_type = "text_image";
-google_ad_channel ="pastebin";
-google_color_border = "D9D0C3";
-google_color_bg = "D9D0C3";
-google_color_link = "474C7F";
-google_color_url = "888888";
-google_color_text = "000000";
-</script>
-<script type="text/javascript"
-  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-//-->
+<!-- Ideal ad spot -->
+
 <iframe data-aa='707814' src='//ad.a-ads.com/707814?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
 <br/>
 <br/>
+
 <?php
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 // show processing errors
@@ -395,7 +370,7 @@ if (isset($page['post']['pid']))
 if (isset($_GET['help']))
 {
 	h1('What is pastebin?');
-	p('pastebin is here to help you collaborate on debugging code snippets. '.
+	p('codebin is here to help you collaborate on debugging code snippets. '.
 		'If you\'re not familiar with the idea, most people use it like this:');
 	
 	echo '<ul>';
@@ -470,7 +445,7 @@ foreach ($CONF['all_syntax'] as $code=>$name)
 ?>
 </select><br/>
 <br/>
-
+<input type="text" maxlength="48" size="48" id="posttitle" name="posttitle" value="Untitled" /><br>
 <?php printf(t('To highlight particular lines, prefix each line with %s'),$CONF['highlight_prefix']); 
 
 $rows=isset($page['post']['editcode']) ? substr_count($page['post']['editcode'], "\n") : 0; 
@@ -485,7 +460,7 @@ if (!empty($page['post']['editcode'])) {
 
 <div id="namebox">
 	
-<label for="poster"><?php echo t('Your Name')?></label><br/>
+<label for="poster"><?php echo t('Post Author')?></label><br/>
 <input type="text" maxlength="24" size="24" id="poster" name="poster" value="<?php echo isset($page['poster'])?$page['poster']:'' ?>" />
 <input type="submit" name="paste" value="<?php echo t('Send')?>"/>
 <br />

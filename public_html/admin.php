@@ -1,9 +1,9 @@
 <?php
 /**
- * $Project: Not-Pastebin $
- * $Id: admin.php,v 0.0.1-r01 11/10/2017 12:53:22 AM veritas Exp $
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
  * 
- * Not-Pastebin Collaboration Tool
+ * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)

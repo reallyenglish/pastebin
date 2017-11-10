@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Not-Pastebin $
- * $Id: pastebin.php,v v0.0.1-r01 11/10/2017 12:32:58 AM veritas Exp $
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
  * 
- * Not-Pastebin Collaboration Tool
+ * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
-  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
@@ -30,6 +30,9 @@ require_once('pastebin/config.inc.php');
 require_once('geshi/geshi.php');
 require_once('pastebin/diff.class.php');
 require_once('pastebin/pastebin.class.php');
+
+$pid='';
+$ver='0.0.1-r02';
 
 /**
 * This array contains information needed to support a particular character set
@@ -455,7 +458,7 @@ $page['title']=	$CONF['title'];
 //on a subdomain, label it as private...
 if (strlen($CONF['subdomain']))
 {
-	$page['title']=$CONF['subdomain']. ' private pastebin - collaborative debugging tool';
+	$page['title']=$CONF['subdomain']. ' private codebin - collaborative debugging tool';
 }
 elseif (($page['current_format']!='text') && isset($CONF['all_syntax'][$page['current_format']]))
 {
@@ -473,9 +476,4 @@ include("layout.php");
 // clean up older posts 
 $pastebin->doGarbageCollection();
 
-DB::dumpDiagnostics();
-
-
-  
-
-
+DBClass::dumpDiagnostics();

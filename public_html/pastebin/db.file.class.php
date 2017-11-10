@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Pastebin $
- * $Id: db.mysql.class.php,v 1.3 2006/04/27 16:20:06 paul Exp $
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
  * 
- * Pastebin Collaboration Tool
- * http://pastebin.com/
+ * Codebin Collaboration Tool
+ * http://scans.vts-tech.org/
  *
- * This file copyright (C) 2005 Paul Dixon (paul@elphin.com)
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
@@ -19,7 +19,7 @@
  * 
  * You should have received a copy of the Affero General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.s
  */
  
 /**
@@ -47,7 +47,7 @@ we can expire these on an as needed basis
 */
 
 
-class DB
+class DBClass
 {
 	var $dblink=null;
 	var $dbresult;

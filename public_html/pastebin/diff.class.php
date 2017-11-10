@@ -29,10 +29,10 @@
 
 	Contact: d.u.diff@holomind.de <daniel unterberger>
 
-
 	Modified by Paul Dixon (paul@elphin.com) to provide class-based 
 	interface for http://pastebin.com diff feature
-
+  Project: Codebin (Fork of Pastebin)
+  ver: v0.0.1-r02 11/10/2017 4:19:52 AM
 **/
 
 class Diff
