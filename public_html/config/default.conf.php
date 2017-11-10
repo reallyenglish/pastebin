@@ -1,9 +1,9 @@
 <?php
 /**
- * $Project: Not-Pastebin $
- * $Id: default.conf.php,v 0.0.1-r01 2017/11/10 00:02:24 veritas Exp $
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
  * 
- * Not-Pastebin Collaboration Tool
+ * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
@@ -156,6 +156,7 @@ $CONF['all_syntax']=array(
 	'asp'=>'ASP',
 	'autoit'=>'AutoIt',
 	'bash'=>'Bash',
+	'bat'=>'Windows Batch file',
 	'blitzbasic'=>'Blitz Basic',
 	'bnf'=>'BNF',
 	'c'=>'C',
@@ -165,13 +166,15 @@ $CONF['all_syntax']=array(
 	'cpp'=>'C++',
 	'csharp'=>'C#',
 	'cfm'=>'ColdFusion',
+	'coff'=>'CoffeeScript',
 	'css'=>'CSS',
+	'cue'=>'Cuesheet',
 	'd'=>'D',
 	'delphi'=>'Delphi',
 	'diff'=>'Diff',
 	'dos'=>'DOS',
 	'eiffel'=>'Eiffel',
-        'erlang'=>'Erlang',
+	'erlang'=>'Erlang',
 	'fortran'=>'Fortran',
 	'freebasic'=>'FreeBasic',
 	'genero'=>'Genero',
@@ -179,6 +182,7 @@ $CONF['all_syntax']=array(
 	'groovy'=>'Groovy',
 	'haskell'=>'Haskell',
 	'html4strict'=>'HTML',
+	'HTML5'=>'HTML5',
 	'groovy'=>'Groovy',
 	'idl'=>'IDL',
 	'ini'=>'INI',
@@ -188,7 +192,7 @@ $CONF['all_syntax']=array(
 	'latex'=>'Latex',
 	'lisp'=>'Lisp',
 	'lua'=>'Lua',
-        'lsl2'=>'Linden Scripting Language',
+  'lsl2'=>'Linden Scripting Language',
 	'matlab'=>'MatLab',
 	'm68k'=>'M68000 Assembler',
 	'mpasm'=>'MPASM',
@@ -213,7 +217,7 @@ $CONF['all_syntax']=array(
 	'smarty'=>'Smarty',
 	'sql'=>'SQL',
 	'tcl'=>'TCL',
-        'unreal'=>'unrealScript',
+  'unreal'=>'unrealScript',
 	'vb'=>'VisualBasic',
 	'vbnet'=>'VB.NET',
 	'visualfoxpro'=>'VisualFoxPro',
