@@ -1,3 +1,12 @@
+Not-Pastebin History
+=====================
+v0.0.1-r01 11/10/2017 12:08:31 AM
+Fork of Original Pastebin
+Restructured script. Moved /libs to /public_html
+Default is 'file' storage, ModRewrite off
+Modified CSS slightly
+Removed some Google affiliated scripts/code
+
 Pastebin History
 =================
 v0.62 - 01-Oct-13 - re-release of original pastebin.com as a github repo
