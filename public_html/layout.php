@@ -25,6 +25,7 @@
 echo "<?xml version=\"1.0\" encoding=\"".$charset_code[$charset]['http']."\"?>\n";
 
 $pid='';
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -55,17 +56,9 @@ need to upgrade.  Visit <a href="http://www.webstandards.org/upgrade/" target="_
 for a variety of options.</p>
 </div>
 
-<div id="titlebar"><?php 
+<div id="titlebar"><a href="http://scans.vts-tech.org"><?php 
 	echo $page['title'];
-	if ($subdomain=='')
-	{
-		#echo " <a href=\"{$CONF['this_script']}?help=1\">View Help</a>";
-	}
-	else
-	{
-		#echo " <a href=\"{$CONF['this_script']}?help=1\">What's a private pastebin?</a>";
-	}
-?>
+?></a>
 </div>
 
 
