@@ -20,7 +20,7 @@ Further documentation
 Contact
 =======
 * email: nigel at nigeltodman dot com
-* blog: http:/www.nigeltodman.com
+* blog: http://www.nigeltodman.com
 * twitter: @Veritas_83
 * xmpp: veritas@creep.im
 
