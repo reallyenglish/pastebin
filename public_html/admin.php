@@ -1,12 +1,12 @@
 <?php
 /**
- * $Project: Pastebin $
- * $Id: pastebin.php,v 1.3 2006/04/27 16:21:10 paul Exp $
+ * $Project: Not-Pastebin $
+ * $Id: admin.php,v 0.0.1-r01 11/10/2017 12:53:22 AM veritas Exp $
  * 
- * Pastebin Collaboration Tool
- * http://pastebin.com/
+ * Not-Pastebin Collaboration Tool
+ * http://scans.vts-tech.org/
  *
- * This file copyright (C) 2006 Paul Dixon (paul@elphin.com)
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the Affero General Public License 
