@@ -10,6 +10,8 @@ generally modifying the code to suit my needs.
 Aside from this README, I'll leave the original documentation in tact until
 it no longer becomes relevant.
 
+Default is ModRewrite off and 'file' storage system as opposed to mysql
+
 Further documentation
 =====================
 * See INSTALL for installation instructions
