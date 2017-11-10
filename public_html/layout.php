@@ -533,15 +533,22 @@ if (!empty($page['post']['editcode'])) {
 ?>
 
 </div>
+<!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+var sc_project=9581418; 
+var sc_invisible=1; 
+var sc_security="fb25b689"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
 </script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-83055-7");
-pageTracker._setDomainName(".pastebin.com");
-pageTracker._trackPageview();
-} catch(err) {}</script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="http://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="//c.statcounter.com/9581418/0/fb25b689/1/" alt="Web
+Analytics Made Easy - StatCounter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
