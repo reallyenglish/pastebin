@@ -4,6 +4,16 @@ The Layout Reservoir - well worth a look.
 http://www.bluerobot.com/web/layouts/
 */
 
+/**
+ * $Project: Not-Pastebin $
+ * $Id: pastebin.css,v 0.0.1-r01 11/10/2017 12:49:28 AM veritas Exp $
+ * 
+ * Not-Pastebin Collaboration Tool
+ * http://scans.vts-tech.org/
+ *
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
+*/
+
 body {
 	color:#333;
 	background-color: #FFF;
