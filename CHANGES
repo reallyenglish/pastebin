@@ -1,8 +1,10 @@
 Not-Pastebin History
 =====================
+v0.0.1-r02 11/10/2017 4:33:06 AM
 This fork of Pastebin is now called Codebin
 Added non-functional 'Post Title' field. Defaults to 'Untitled'
 Renamed DB and Pastebin classes
+Added 'Windows Batch File', 'CoffeeScript' and 'HTML5' syntax options
 
 v0.0.1-r01 11/10/2017 12:08:31 AM
 Fork of Original Pastebin
