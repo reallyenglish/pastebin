@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: Codebin (Fork of Pastebin)
- * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
+ * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
  * 
  * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
@@ -32,7 +32,7 @@ require_once('pastebin/diff.class.php');
 require_once('pastebin/pastebin.class.php');
 
 $pid='';
-$ver='0.0.1-r02';
+$ver='0.0.1-r03';
 
 /**
 * This array contains information needed to support a particular character set
@@ -164,7 +164,7 @@ if (get_magic_quotes_gpc())
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// create our pastebin object
+// create our Codebin object
 //
 $pastebin=new Pastebin($CONF);
 
@@ -209,7 +209,7 @@ if (isset($_GET['dl']))
 	elseif (!$pastebin->doDownload($pid))
 	{
 		//not found
-		echo "Pastebin entry $pid is not available";
+		echo "Codebin entry $pid is not available";
 	}
 	exit;
 }
@@ -277,7 +277,7 @@ if (isset($_POST['feedback']) && strlen($_POST['msg']))
 			}	
 		}
 		
-		@mail($CONF['feedback_to'], "Pastebin Feedback", $msg, "From: {$CONF['feedback_sender']}");
+		@mail($CONF['feedback_to'], "Codebin Feedback", $msg, "From: {$CONF['feedback_sender']}");
 		$page['thankyou']=t('Thanks for your feedback, if you included an email address in your message, we\'ll get back to you asap.');
 	}
 	else
@@ -364,7 +364,7 @@ if (isset($_POST['abuse']))
                 $email.="View: http://{$_SERVER['HTTP_HOST']}/$pid\n";
                 $email.="Delete: http://{$_SERVER['HTTP_HOST']}/?erase=$pid\n";
                 $email.=$msg;
-		@mail($CONF['feedback_to'], "$duration Pastebin Abuse $pid ($abuse)", $email, "From: {$CONF['feedback_sender']}");
+		@mail($CONF['feedback_to'], "$duration Codebin Abuse $pid ($abuse)", $email, "From: {$CONF['feedback_sender']}");
 
                 //new method...write info file to abuse folder
                 $file=$_SERVER['DOCUMENT_ROOT']."/../abuse/$pid";
@@ -405,7 +405,7 @@ if (isset($_REQUEST["show"]))
                 $is_bot=preg_match('/bot|slurp/i',$_SERVER['HTTP_USER_AGENT']);
 		if ($is_bot)
 		{
-		    echo 'Pastebin post expired or deleted - <a href="http://scans.vts-tech.org/">click here to make a new post<a/>';
+		    echo 'Codebin post expired or deleted - <a href="http://scans.vts-tech.org/">click here to make a new post<a/>';
 		    exit;
 		}
 	}
@@ -436,7 +436,7 @@ if (isset($_REQUEST["show"]))
 }
 else
 {
-	 $page['posttitle']='New Posting';
+	 $page['posttitle']='Untitled';
 }
 /*
 if (isset($_REQUEST["debug"]))
@@ -476,4 +476,4 @@ include("layout.php");
 // clean up older posts 
 $pastebin->doGarbageCollection();
 
-DBClass::dumpDiagnostics();
+DB::dumpDiagnostics();

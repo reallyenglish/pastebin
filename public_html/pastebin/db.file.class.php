@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: Codebin (Fork of Pastebin)
- * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
+ * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
  * 
  * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
@@ -47,7 +47,7 @@ we can expire these on an as needed basis
 */
 
 
-class DBClass
+class DB
 {
 	var $dblink=null;
 	var $dbresult;
@@ -137,7 +137,7 @@ class DBClass
 	* Add post and return id
 	* access public
 	*/
-	function addPost($poster,$subdomain,$format,$code,$parent_pid,$expiry_flag,$token)
+	function addPost($poster,$subdomain,$format,$code,$parent_pid,$expiry_flag,$token,$posttitle2)
 	{
 		//figure out expiry time
 		switch ($expiry_flag)
@@ -170,7 +170,7 @@ class DBClass
 		$post['token']=$token;
 		$post['followups']=array();
 		$post['ip']=$_SERVER['REMOTE_ADDR'];
-		
+		$post['posttitle2']=$posttitle2;
 		
 		
 		//try and get a unique filename

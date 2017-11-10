@@ -1,7 +1,7 @@
 <?php
 /**
  * $Project: Not-Pastebin $
- * $Id: pastebin.class.php,v 0.0.1-r01 11/10/2017 12:53:22 AM veritas Exp $
+ * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
  * 
  * Not-Pastebin Collaboration Tool
  * http://scans.vts-tech.org/
@@ -27,7 +27,7 @@
 * Pastebin class models the pastebin data storage without getting involved
 * in any UI generation
 */
-class PastebinClass
+class Pastebin
 {
 	var $conf=null;
 	var $db=null;
@@ -59,6 +59,14 @@ class PastebinClass
 	function _cleanUsername($name)
 	{
 		return trim(substr(preg_replace('/[^A-Za-z0-9_ \-]/', '',$name),0,24));	
+	}
+
+	/**
+	* Private method for validating a user-submitted post title
+	*/
+	function _cleanTitle($title)
+	{
+		return trim(substr(preg_replace('/[^A-Za-z0-9_ \-]/', '',$title),0,48));	
 	}
 	
 	/**
@@ -143,7 +151,8 @@ class PastebinClass
 		$post['poster']=$this->_cleanUsername($post['poster']);
 		$post['format']=$this->_cleanFormat($post['format']);
 		$post['expiry']=$this->_cleanExpiry($post['expiry']);
-		
+		$post['posttitle2']=$this->_cleanTitle($post['posttitle2']);		
+
 		//get a token we'll use to remember this post
 		$post['token']=isset($_COOKIE['persistToken'])?
 			$this->_cleanToken($_COOKIE['persistToken']):
@@ -195,7 +204,7 @@ class PastebinClass
 					$parent_pid=$this->cleanPostId($post['parent_pid']);
 					
 				$id=$this->db->addPost($post['poster'],$this->conf['subdomain'],$format,$code,
-					$parent_pid,$post['expiry'],$post['token']);
+					$parent_pid,$post['expiry'],$post['token'],$post['posttitle2']);
 			}
 			else
 			{
@@ -365,7 +374,7 @@ class PastebinClass
 		if ($post)
 		{
 			//show a quick reference url, poster and parents
-			$post['posttitle']="Posted by {$post['poster']} on {$post['postdate']}";
+			$post['posttitle']="<b><font size=3>Title: {$post['posttitle2']}</b></font><br>Posted by {$post['poster']} on {$post['postdate']}";
 			
 			if ($post['parent_pid']!='0')
 			{

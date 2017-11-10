@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: Codebin (Fork of Pastebin)
- * ver: v0.0.1-r02 11/10/2017 4:19:52 AM
+ * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
  * 
  * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
@@ -445,7 +445,7 @@ foreach ($CONF['all_syntax'] as $code=>$name)
 ?>
 </select><br/>
 <br/>
-<input type="text" maxlength="48" size="48" id="posttitle" name="posttitle" value="Untitled" /><br>
+<label for="posttitle2"><input type="text" maxlength="48" size="48" id="posttitle2" name="posttitle2" value="Untitled" /></label><br>
 <?php printf(t('To highlight particular lines, prefix each line with %s'),$CONF['highlight_prefix']); 
 
 $rows=isset($page['post']['editcode']) ? substr_count($page['post']['editcode'], "\n") : 0; 

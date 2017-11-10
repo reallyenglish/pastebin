@@ -1,5 +1,11 @@
-Not-Pastebin History
+Codebin History
 =====================
+v0.0.1-r03 11/10/2017 6:13:14 AM
+Post Title field is now functional.
+Added 'Cuesheet' syntax option
+Added _cleanTitle() function
+Unrenamed DB and Pastebin classes
+
 v0.0.1-r02 11/10/2017 4:33:06 AM
 This fork of Pastebin is now called Codebin
 Added non-functional 'Post Title' field. Defaults to 'Untitled'
