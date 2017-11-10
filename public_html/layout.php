@@ -62,11 +62,11 @@ for a variety of options.</p>
 	echo $page['title'];
 	if ($subdomain=='')
 	{
-		echo " <a href=\"{$CONF['this_script']}?help=1\">View Help</a>";
+		#echo " <a href=\"{$CONF['this_script']}?help=1\">View Help</a>";
 	}
 	else
 	{
-		echo " <a href=\"{$CONF['this_script']}?help=1\">What's a private pastebin?</a>";
+		#echo " <a href=\"{$CONF['this_script']}?help=1\">What's a private pastebin?</a>";
 	}
 ?>
 </div>
@@ -143,18 +143,6 @@ for a variety of options.</p>
 
 <?php if (!isset($_GET['search'])) { ?>
 
-<h1>Search Pastebin</h1>
-
-<form action="http://pastebin.com/search" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-3281640380846080:rwgn88wz7bt" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="14" />
-    <input type="submit" name="sa" value="Search Pastebin" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
 
 <?php } ?>
 
@@ -184,55 +172,11 @@ just want to give some feedback on the idea, please
 -->
 
 <?php
-if ($subdomain=='')
-{
-	echo '<h1>'.t('Free subdomains').'</h1><p>';
-	
-	echo t('Want your own xyz.pastebin.com sub-domain for your community? '.
-		'Just type the address into your browser address bar.');
-	
-	echo " <a href=\"{$CONF['this_script']}?help=1\">".t('See help for details').
-		'</a></p>';
-}
-
-echo '<h1>'.t('About').'</h1><p>';
-
-echo t('Pastebin is a tool for collaborative debugging or editing,');
-echo " <a href=\"{$CONF['this_script']}?help=1\">".t('See help for details').
-		'</a>. ';	
-
-
-/*
-echo '<p>'.t('Please send feedback below...').'</p>';
-
-if (isset($page['thankyou']))
-{
-	echo "<p style=\"color:red;\">{$page['thankyou']}</p>";
-}
-else
-{
-?>
-<a name="feedback"></a>
-<form method="post" action="<?php echo $CONF['this_script'].'#feedback' ?>">
-<textarea name="msg" rows="5" style="width:90%;margin-left:5%;font-size:8pt;font-family:Arial;"></textarea>
-<input type="hidden" name="feedback" value="1"/>
-<input style="width:90%;margin-left:5%" type="submit" value="<?php echo t('send feedback') ?>"/>
-</form><br/>
-<?php } 
-*/
-?>
-
-<?php
 
 echo '<h1>'.t('Credits').'</h1><p>';
 	
-	echo t('Software developed by <a href="http://blog.dixo.net/about/">Paul Dixon</a>');
+	echo t('Original Pastebin developed by <a href="http://blog.dixo.net/about/">Paul Dixon</a>, 2002-2007 (<a href="https://github.com/lordelph/pastebin">GitHub</a>)<br><br>Forked by <a href="http://www.nigeltodman.com">Nigel Todman</a>, 2017 (<a href="https://github.com/Veritas83/pastebin">GitHub</a>)');
 
-        //show sponsor URL until 15 Aug 2010
-        if (($_SERVER['SCRIPT_URI']=='http://pastebin.com/') && (time()<1281826800))
-	{
-   	    echo t('<br>Support provided by <a href="http://webhostingsearch.com/">web hosting search</a>');
-	}
 ?>
 
 
@@ -250,7 +194,7 @@ echo '<h1>'.t('Credits').'</h1><p>';
 if (strlen($CONF['google_ad_client']) && !isset($_GET['search'])) 
 {
 ?>
-<script type="text/javascript"><!--
+<!-- <script type="text/javascript"><!--
 google_ad_client = "pub-3281640380846080";
 google_ad_width = 728;
 google_ad_height = 90;
@@ -262,10 +206,12 @@ google_color_bg = "D9D0C3";
 google_color_link = "474C7F";
 google_color_url = "888888";
 google_color_text = "000000";
-//--></script>
+</script>
 <script type="text/javascript"
   src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
+//-->
+<iframe data-aa='707814' src='//ad.a-ads.com/707814?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
 <br/>
 <br/>
 <?php
@@ -501,76 +447,6 @@ if (isset($_GET['help']))
 	'post from the same computer you posted from - simply view the post and click the "delete post" link.');
 	p('In other cases, contact us and we will delete it for you');
 	
-	h1('What\'s a private pastebin and how do I get one?');
-	
-	p('You get a private pastebin simply by thinking up a domain name no-one else is using, '.
-	'e.g. http://private.pastebin.com or http://this-is-my.pastebin.com. Posts made into a '.
-	'subdomain only show up on that domain, making it easy for you to collaborate without the '.
-	'\'noise\' of the regular service at <a href="http://pastebin.com">http://pastebin.com</a>');
-	
-	p('All you need to do is change the web address in your browser to access a private pastebin, '.
-		'or you can simply enter the domain you\'d like below.')
-	?>
-	
-	<form method="get" action="<?php echo $CONF['this_script']?>">
-	<input type="hidden" name="help" value="1"/>
-	<p><?php echo t('Go to')?> http://<input type="text" name="goprivate" value="<?php echo htmlentities(stripslashes($_GET['goprivate'])) ?>" size="10"/>.pastebin.com 
-	<input type="submit" name="go" value="<?php echo t('Go')?>"/></p>
-	<?php if (isset($_GET['goprivate'])) { p('Please use only characters a-z,0-9, dash \'-\' and period \'.\'. Your name must start and end with a letter or number.'); } ?>
-	</form>
-	<?php
-	
-	p('Please note that there is no password protection - subdomains are accessible to anyone '.
-	'who knows the domain name you\'ve chosen, but we do not publish a list of domains used.');
-	
-	h1('Subdomains for your language...');
-	
-	p('If a subdomain matches a language name, the required syntax highlighting is selected '.
-	'for you, so ruby.pastebin.com will preselect Ruby automatically. ');
-	
-	echo '<p>';
-	
-	$sep="";
-	foreach($CONF['all_syntax'] as $langcode=>$langname)
-	{
-		if ($langcode=='text')
-			$langname="Plain Text";
-		echo "{$sep}<a title=\"{$langname} Pastebin\" href=\"http://{$langcode}.pastebin.com\">{$langname}</a>";
-		$sep=", ";
-	}	
-		
-	echo '</p>';
-	
-		
-		
-	
-	h1('And this is all free?');
-	p('It will always be free, our hosting and maintenance costs are paid for through advertising.');
-	
-        h1('Acceptable Use Policy');	
-        p('Broadly speaking, the site was created to help programmers. Any post or usage pattern not related to that goal which results in unusually high traffic '.
-          'will be flagged for investigation. Your post may be deleted and your IP blocked.');
-        p('In particular, please do not post email lists, password lists or personal information. The "report abuse" feature can be used to flag such posts and they will be deleted.');
-        p('Do not aggressively spider the site. Exceptions can be arranged, contact me to discuss.');
-        p('If you can access pastebin.com from one location, but not another, it\'s likely your IP address has been blocked for violating this policy. Get in touch and the block can be lifted.');
-
-	h1('Can I host my own copy of the pastebin software?');
-	p('The source code to this site is available under a GPL licence. '.
-		'You can <a title="Pastebin source code, 245Kb" href="pastebin.tar.gz">download it here</a>');
-
-        //sponsor link until Aug 15 2010
-	if (time()<1281826800)
-        {
-            p('To host it yourself, you\'ll need the software, a <a href="http://webhostingsearch.com/domain-search.php">domain name</a>, and a PHP enabled webserver');
-	}
-
-	p('More news available on my <a title="View pastebin related posts on my blog" href="http://blog.dixo.net/category/pastebin/">blog</a>.');
-
-	
-	h1('I have some feedback, who do I contact?');
-	print '<p>'.t('Send an email to ');
-	print '<script type="text/javascript">eval(unescape(\'%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%70%61%75%6c%40%65%6c%70%68%69%6e%2e%63%6f%6d%22%20%3e%50%61%75%6c%20%44%69%78%6f%6e%3c%2f%61%3e%27%29%3b\'))</script>';
-	
 }
 else if (isset($_GET['search']))
 {
@@ -581,34 +457,6 @@ else if (isset($_GET['search']))
     }
 
     ?>
-<h1>You can search for posts which Google has indexed below...</h1>
-
-
-<form action="http://pastebin.com/search" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-3281640380846080:rwgn88wz7bt" />
-    <input type="hidden" name="cof" value="FORID:10" />
-    <input type="hidden" name="ie" value="ISO-8859-1" />
-    <input type="text" name="q" size="32" value="<?php echo $q ?>"/>
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
-
-
-<h1>Search Results</h1>
-
-<div id="cse-search-results"></div>
-<script type="text/javascript">
-  var googleSearchIframeName = "cse-search-results";
-  var googleSearchFormName = "cse-search-box";
-  var googleSearchFrameWidth = 800;
-  var googleSearchDomain = "www.google.com";
-  var googleSearchPath = "/cse";
-</script>
-<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
-
-
 
 <?php
 }

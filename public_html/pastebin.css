@@ -6,14 +6,14 @@ http://www.bluerobot.com/web/layouts/
 
 body {
 	color:#333;
-	background-color: #D9D0C3;
+	background-color: #FFF;
 	margin:0px;
 	padding:0px;
 	font:11px verdana, arial, helvetica, sans-serif;
 }
 
 h1 {
-	background-color: #BFB8AC;
+	background-color: #FFF;
 	color: #ffffff;
 	font-family: trebuchet ms, verdana, sans-serif;
 	font-size: 11px;
@@ -26,7 +26,7 @@ h1 {
 	
 #spamform
 {
-	background:#EED0C3;
+	background:#FFF;
 	padding:5px;
 }
 
@@ -73,7 +73,7 @@ h1 a:hover{color:yellow;background-color:transparent;}
 
 #content h1
 {
-	background-color: #807A73;
+	background-color: #5355AC;
 
 }
 
@@ -103,7 +103,7 @@ code { font-size:12px;width:98%;}
 	font-size:20px;
 	padding: 0px 0px 0px 5px;
 	height:24px;
-	background-color: #807A73;
+	background-color: #0080FF;
 	color: #fff;
 	margin-bottom: 11px;
 }
@@ -125,7 +125,7 @@ code { font-size:12px;width:98%;}
 	top:24px;
 	left:0px;
 	width:162px;
-	background-color: #FFF5E6;
+	background-color: #D7FFFF;
 	line-height:17px;
 	overflow: hidden;
 

@@ -4,7 +4,7 @@
  * $Id: pastebin.php,v 1.3 2006/04/27 16:21:10 paul Exp $
  * 
  * Pastebin Collaboration Tool
- * http://pastebin.com/
+ * http://scans.vts-tech.org/
  *
  * This file copyright (C) 2006 Paul Dixon (paul@elphin.com)
  * 
@@ -159,25 +159,11 @@ if (get_magic_quotes_gpc())
 		array_walk ($_COOKIE, 'callback_stripslashes');
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// user submitted the "private pastebin" form? redirect them...
-//
-if (isset($_GET['goprivate']))
-{
-	$sub=trim(strtolower($_GET['goprivate']));
-	if (preg_match('/^[a-z0-9][a-z0-9\.\-]*[a-z0-9]$/i', $sub))
-	{
-		header("Location: http://{$sub}.pastebin.com");
-		exit;
-	}
-}
 
 ///////////////////////////////////////////////////////////////////////////////
 // create our pastebin object
 //
 $pastebin=new Pastebin($CONF);
-
-
 
 
 
@@ -416,7 +402,7 @@ if (isset($_REQUEST["show"]))
                 $is_bot=preg_match('/bot|slurp/i',$_SERVER['HTTP_USER_AGENT']);
 		if ($is_bot)
 		{
-		    echo 'Pastebin post expired or deleted - <a href="http://pastebin.com/">click here to make a new post<a/>';
+		    echo 'Pastebin post expired or deleted - <a href="http://scans.vts-tech.org/">click here to make a new post<a/>';
 		    exit;
 		}
 	}

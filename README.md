@@ -1,38 +1,14 @@
-Pastebin
+Pastebin-esque Project (Unnamed)
 ========
 
-This is the source code to the original pastebin.com, which I started
-back in 2002. While the code was always available under a AGPL licence,
-I sold the domain in 2010 due to the time required to deal with all the
-copyright issues and other complaints the site drew. 
+This is a fork of the original Pastebin source code from 2007. It was
+published on GitHub in 2013 at github.com/lordelph/pastebin
 
-This tool was orignally designed to enable collaborative code review via 
-the #php IRC channel. Inspired by www.parseerror.com/paste, but more 
-streamlined and capable of allowing collabation via IRC by allowing easy 
-modification of posted code. Another benefit is short urls - e.g. 
-http://pastebin.com/333
+I'll be adding a few features to the code, fixing any security bugs and
+generally modifying the code to suit my needs.
 
-Since then it has found uses in many developer communities and has many
-improvements made.
-
-It's been in limbo for a while, but from Oct 2013 has been available on
-GitHub.
-
-Forks
-=====
-* http://bitbucket.org/j-samuel/paste - this is a fork from 2010 and no update since 2015-04-19
-
-
-To Do
-=====
-This started out as a single-script site back in 2002, and grew somewhat
-organically. It could use some cleaning up, and in particular, it needs
-some unit tests.
-
-Anyone is welcome to make improvements - fork the repository, and if you
-would like your changes to be considered for this release, just send me
-pull request.
-
+Aside from this README, I'll leave the original documentation in tact until
+it no longer becomes relevant.
 
 Further documentation
 =====================
@@ -43,10 +19,10 @@ Further documentation
 
 Contact
 =======
-* email: paul at elphin dot com
-* blog: http:/blog.dixo.net
-* twitter: @lordelph
-* skype: lordelph
+* email: nigel at nigeltodman dot com
+* blog: http:/www.nigeltodman.com
+* twitter: @Veritas_83
+* xmpp: veritas@creep.im
 
 
 
