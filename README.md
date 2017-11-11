@@ -1,4 +1,4 @@
-<img src="https://i.gyazo.com/04671a994117980f038c542dd03f3cd8.png">
+<img src="https://i.gyazo.com/9ad9793b5bae61cb53541aa56b9018b9.png">
 
 Codebin (Pastebin Fork)
 ========
@@ -27,11 +27,3 @@ Contact
 * blog: http://www.nigeltodman.com
 * twitter: @Veritas_83
 * xmpp: veritas@creep.im
-
-
-
-
-
-
-
-

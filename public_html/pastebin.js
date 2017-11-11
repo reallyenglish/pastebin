@@ -3,11 +3,13 @@
 *   This code can be reusedas long as the above copyright notice
 *   is not removed
 *
-* $Project: Not-Pastebin $
-* $Id: pastebin.js,v 0.0.1-r01 11/10/2017 12:51:21 AM veritas Exp $
-* 
-* Not-Pastebin Collaboration Tool
-* http://scans.vts-tech.org/
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r04 11/11/2017 2:16:41 AM
+ * 
+ * Codebin Collaboration Tool
+ * http://scans.vts-tech.org/
+ *
+ * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
 *
 */
 

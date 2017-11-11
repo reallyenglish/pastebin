@@ -1,9 +1,9 @@
 <?php
 /**
- * $Project: Not-Pastebin $
- * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
+ * Project: Codebin (Fork of Pastebin)
+ * ver: v0.0.1-r04 11/11/2017 2:16:41 AM
  * 
- * Not-Pastebin Collaboration Tool
+ * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
  *
  * This file copyright (C) 2017 Nigel Todman (nigel@nigeltodman.com)
@@ -66,7 +66,7 @@ class Pastebin
 	*/
 	function _cleanTitle($title)
 	{
-		return trim(substr(preg_replace('/[^A-Za-z0-9_ \-]/', '',$title),0,48));	
+		return trim(substr(preg_replace('/[^A-Za-z0-9_ \-]/', '',$title),0,64));	
 	}
 	
 	/**
@@ -260,6 +260,9 @@ class Pastebin
 					break;
 				case 'perl':
 					$ext='pl';
+					break;
+				case 'cue':
+					$ext='cue';
 					break;
 				case 'php':
 				case 'c':

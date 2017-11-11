@@ -1,5 +1,11 @@
 Codebin History
 =====================
+v0.0.1-r04 11/11/2017 2:15:07 AM
+Post Title size limit increase to 64 from 48 chars
+Post Title now recorded in MRU Entry
+Recent Posts now displayed with Post Title instead of Post Author
+Renamed 'Send' button to 'Post' button
+
 v0.0.1-r03 11/10/2017 6:13:14 AM
 Post Title field is now functional.
 Added 'Cuesheet' syntax option

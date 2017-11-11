@@ -1,7 +1,7 @@
 <?php
 /**
  * Project: Codebin (Fork of Pastebin)
- * ver: v0.0.1-r03 11/10/2017 6:14:04 AM
+ * ver: v0.0.1-r04 11/11/2017 2:16:41 AM
  * 
  * Codebin Collaboration Tool
  * http://scans.vts-tech.org/
@@ -121,7 +121,7 @@ for a variety of options.</p>
 			$cls="";
 			
 		echo "<li{$cls}><a href=\"{$entry['url']}\">";
-		echo $entry['poster'];
+		echo $entry['posttitle2'];
 		echo "</a><br/>{$entry['agefmt']}</li>\n";
 	}
 
@@ -445,7 +445,8 @@ foreach ($CONF['all_syntax'] as $code=>$name)
 ?>
 </select><br/>
 <br/>
-<label for="posttitle2"><input type="text" maxlength="48" size="48" id="posttitle2" name="posttitle2" value="Untitled" /></label><br>
+<label for="posttitle2"><?php echo t('Post Title')?></label><br/>
+<input type="text" maxlength="64" size="64" id="posttitle2" name="posttitle2" value="Untitled" /><br>
 <?php printf(t('To highlight particular lines, prefix each line with %s'),$CONF['highlight_prefix']); 
 
 $rows=isset($page['post']['editcode']) ? substr_count($page['post']['editcode'], "\n") : 0; 
@@ -462,7 +463,7 @@ if (!empty($page['post']['editcode'])) {
 	
 <label for="poster"><?php echo t('Post Author')?></label><br/>
 <input type="text" maxlength="24" size="24" id="poster" name="poster" value="<?php echo isset($page['poster'])?$page['poster']:'' ?>" />
-<input type="submit" name="paste" value="<?php echo t('Send')?>"/>
+<input type="submit" name="paste" value="<?php echo t('Post')?>"/>
 <br />
 <?php echo '<input type="checkbox" name="remember" value="1" '.$page['remember'].' />'.t('Remember me so that I can delete my post'); ?>
 
