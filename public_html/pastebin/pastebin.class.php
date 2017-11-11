@@ -84,9 +84,6 @@ class Pastebin
 	{
 		if (!array_key_exists($format, $this->conf['all_syntax']))
 			$format='text';
-		else {
-		 	$format='text';
-		}	
 		return $format;	
 	}
 	

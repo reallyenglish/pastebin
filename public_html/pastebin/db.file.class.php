@@ -541,6 +541,7 @@ class DB
 	
 	static function dumpDiagnostics()
 	{
+		
 		/*
 		global $CONF;
 		if ($CONF["maintainer_mode"])
