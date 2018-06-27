@@ -54,7 +54,7 @@ need to upgrade.  Visit <a href="http://www.webstandards.org/upgrade/" target="_
 for a variety of options.</p>
 </div>
 
-<div id="titlebar"><a href="http://scans.vts-tech.org"><?php 
+<div id="titlebar"><a href="/"><?php
 	echo $page['title'];
 ?></a>
 </div>
@@ -159,9 +159,6 @@ echo '<h1>'.t('Credits').'</h1><p>';
 
 <div id="content">
 
-<!-- Ideal ad spot -->
-
-<iframe data-aa='707814' src='//ad.a-ads.com/707814?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true'></iframe>
 <br/>
 <br/>
 
@@ -502,22 +499,5 @@ if (!empty($page['post']['editcode'])) {
 ?>
 
 </div>
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=9581418; 
-var sc_invisible=1; 
-var sc_security="fb25b689"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - StatCounter" href="http://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="//c.statcounter.com/9581418/0/fb25b689/1/" alt="Web
-Analytics Made Easy - StatCounter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
