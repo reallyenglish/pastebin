@@ -361,8 +361,8 @@ if (isset($_POST['abuse']))
 		
 		
 		$email="Possible spam post, click link to view\n";
-                $email.="View: http://{$_SERVER['HTTP_HOST']}/$pid\n";
-                $email.="Delete: http://{$_SERVER['HTTP_HOST']}/?erase=$pid\n";
+                $email.="View: https://{$_SERVER['HTTP_HOST']}/$pid\n";
+                $email.="Delete: https://{$_SERVER['HTTP_HOST']}/?erase=$pid\n";
                 $email.=$msg;
 		@mail($CONF['feedback_to'], "$duration Codebin Abuse $pid ($abuse)", $email, "From: {$CONF['feedback_sender']}");
 
@@ -405,7 +405,7 @@ if (isset($_REQUEST["show"]))
                 $is_bot=preg_match('/bot|slurp/i',$_SERVER['HTTP_USER_AGENT']);
 		if ($is_bot)
 		{
-		    echo 'Codebin post expired or deleted - <a href="http://scans.vts-tech.org/">click here to make a new post<a/>';
+		    echo 'Codebin post expired or deleted - <a href="/">click here to make a new post<a/>';
 		    exit;
 		}
 	}
